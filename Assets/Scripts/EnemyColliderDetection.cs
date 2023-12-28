@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnemyColliderDetection : MonoBehaviour
 {
-    public int damage = 25;
-    public EnemyHealth enemyHealth;
+    [HideInInspector] public int damage = 25;
+    [HideInInspector] public EnemyHealth enemyHealth;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

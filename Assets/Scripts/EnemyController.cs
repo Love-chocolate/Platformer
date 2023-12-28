@@ -57,7 +57,9 @@ public class EnemyController : MonoBehaviour
         if (enemyAndPlayerDistance <= distanceToDetectPlayer && isAttacking == false)
         {
             Vector3 targetPosition = new Vector3(player.transform.position.x, transform.position.y, transform.position.z);
+
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, movementSpeed * Time.deltaTime);
+
             animator.SetBool("isWalking", true);
         }
         else
@@ -117,6 +119,12 @@ public class EnemyController : MonoBehaviour
 
     private void ShootArrow()
     {
+        IEnumerator DeleteArrow(GameObject arrow)
+        {
+            yield return new WaitForSeconds(1);
+            Destroy(arrow);
+        }
+
         if (enemyAndPlayerDistance > distanceToAttackPlayer && enemyAndPlayerDistance < distanceToDetectPlayer && playerHealth.isAlive)
         {
             GameObject arrow = Instantiate(arrowPrefab, firePoint.position, Quaternion.identity);
@@ -129,6 +137,7 @@ public class EnemyController : MonoBehaviour
 
             arrow.GetComponent<Rigidbody2D>().AddForce(directionToPlayer * arrowPower, ForceMode2D.Impulse);
 
+            StartCoroutine(DeleteArrow(arrow));
         }
     }
 

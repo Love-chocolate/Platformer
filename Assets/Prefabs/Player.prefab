@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 853572003}
+  - component: {fileID: 853572006}
   - component: {fileID: 853572004}
   - component: {fileID: 853572005}
-  - component: {fileID: 853572006}
   m_Layer: 0
   m_Name: DamageTrigger
   m_TagString: Untagged
@@ -34,46 +34,6 @@ Transform:
   m_Father: {fileID: 2919595675923451211}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &853572004
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853572002}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.4331202, y: 0.0017250776}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.8662401, y: 1.0034502}
-  m_EdgeRadius: 0
---- !u!114 &853572005
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 853572002}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b44b9ec4ceca29d46a6efcdb15338571, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 25
-  enemyHealth: {fileID: 0}
 --- !u!212 &853572006
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -126,6 +86,46 @@ SpriteRenderer:
   m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &853572004
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853572002}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.4331202, y: 0.0017250776}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.8662401, y: 1.0034502}
+  m_EdgeRadius: 0
+--- !u!114 &853572005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853572002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b44b9ec4ceca29d46a6efcdb15338571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 25
+  enemyHealth: {fileID: 0}
 --- !u!1 &2919595674330515837
 GameObject:
   m_ObjectHideFlags: 0
@@ -208,13 +208,16 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2919595675923451211}
+  - component: {fileID: 947358741}
+  - component: {fileID: 947358742}
   - component: {fileID: 2919595675923451210}
   - component: {fileID: 2919595675923451214}
   - component: {fileID: 2919595675923451213}
   - component: {fileID: 2919595675923451212}
   - component: {fileID: 2919595675923451215}
   - component: {fileID: 2919595675923451313}
-  - component: {fileID: 2131101637}
+  - component: {fileID: 365726783}
+  - component: {fileID: 947358733}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -239,6 +242,50 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!68 &947358741
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2919595675923451208}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 895c79d5f1b5c014a8018b109c7f49f9, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.0972161, y: 0.027665213}
+  - {x: -0.09661521, y: 0.3756141}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
+--- !u!68 &947358742
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2919595675923451208}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 895c79d5f1b5c014a8018b109c7f49f9, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: 0.097621515, y: 0.3714521}
+  - {x: 0.09641183, y: 0.02491565}
+  m_AdjacentStartPoint: {x: 0, y: 0}
+  m_AdjacentEndPoint: {x: 0, y: 0}
+  m_UseAdjacentStartPoint: 0
+  m_UseAdjacentEndPoint: 0
 --- !u!212 &2919595675923451210
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -361,8 +408,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ba75f785a10144daf77cea4f22aa2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
   damageTrigger: {fileID: 853572002}
+  pauseWindow: {fileID: 0}
+  speed: 1.5
 --- !u!114 &2919595675923451313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -375,7 +423,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce685873d067af3409f050165187dc98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  heart:
+  hearts:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -383,7 +431,21 @@ MonoBehaviour:
   cameraCanvas: {fileID: 0}
   deathCanvas: {fileID: 0}
   isAlive: 1
---- !u!114 &2131101637
+--- !u!114 &365726783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2919595675923451208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93ef293f08782bd41950da0c5e0d5a13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  score: 0
+  scoreText: {fileID: 0}
+--- !u!114 &947358733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

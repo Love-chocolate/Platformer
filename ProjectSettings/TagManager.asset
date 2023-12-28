@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Platform
   - Enemy
-  - Limit
+  - Coin
   layers:
   - Default
   - TransparentFX

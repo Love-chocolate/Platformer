@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 6207207217833678259}
   - component: {fileID: 6207207217833678268}
-  - component: {fileID: 6207207217833678269}
-  - component: {fileID: 6207207217833678257}
-  - component: {fileID: 6207207217833678258}
   - component: {fileID: 6207207217833678263}
   - component: {fileID: 6207207217833678256}
+  - component: {fileID: 6207207217833678269}
+  - component: {fileID: 6207207217833678258}
+  - component: {fileID: 6207207217833678257}
   m_Layer: 8
   m_Name: Goblin
   m_TagString: Enemy
@@ -89,61 +89,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6207207217833678269
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6207207217833678270}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 191c4f77c2a20fb438c8fb6b6fd838ec, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
---- !u!114 &6207207217833678257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6207207217833678270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e97982bf3dd5d149ad716c81946e802, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
---- !u!114 &6207207217833678258
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6207207217833678270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7838108dd3bfc6d4e8aa076ee5e92f00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAttacking: 0
-  firePoint: {fileID: 0}
-  arrowPrefab: {fileID: 0}
-  arrowPower: 0
-  isArcher: 0
-  distanceToDetectPlayer: 2
-  distanceToAttackPlayer: 0.6
-  damage: 0.5
-  movementSpeed: 1
 --- !u!50 &6207207217833678263
 Rigidbody2D:
   serializedVersion: 4
@@ -181,3 +126,60 @@ CapsuleCollider2D:
   m_Offset: {x: -0.018364854, y: 0.17209074}
   m_Size: {x: 0.1878155, y: 0.33774397}
   m_Direction: 0
+--- !u!95 &6207207217833678269
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207207217833678270}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 191c4f77c2a20fb438c8fb6b6fd838ec, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &6207207217833678258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207207217833678270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7838108dd3bfc6d4e8aa076ee5e92f00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isAttacking: 0
+  firePoint: {fileID: 0}
+  arrowPrefab: {fileID: 0}
+  arrowPower: 0
+  isArcher: 0
+  distanceToDetectPlayer: 2
+  distanceToAttackPlayer: 0.45
+  damage: 0.5
+  movementSpeed: 1
+--- !u!114 &6207207217833678257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207207217833678270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e97982bf3dd5d149ad716c81946e802, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossHealthBar: {fileID: 0}
+  maxHealth: 100
+  scoreToAdd: 75

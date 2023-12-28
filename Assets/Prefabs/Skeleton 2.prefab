@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 1288767545232273046}
   - component: {fileID: 1288767545232273049}
   - component: {fileID: 1288767545232273048}
+  - component: {fileID: 1204039930}
   - component: {fileID: 1288767545232273047}
   - component: {fileID: 1288767545232273045}
   - component: {fileID: 1288767545232273044}
-  - component: {fileID: 1204039930}
   m_Layer: 8
   m_Name: Skeleton 2
   m_TagString: Enemy
@@ -110,6 +110,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!50 &1204039930
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288767545232273051}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 5
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!70 &1288767545232273047
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -159,25 +180,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e97982bf3dd5d149ad716c81946e802, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bossHealthBar: {fileID: 0}
   maxHealth: 100
---- !u!50 &1204039930
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1288767545232273051}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 5
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
+  scoreToAdd: 50

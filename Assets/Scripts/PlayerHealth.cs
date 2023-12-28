@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-    [SerializeField] private Image[] heart;
+    [SerializeField] private Image[] hearts;
     [SerializeField] private GameObject cameraCanvas;
     [SerializeField] private GameObject deathCanvas;
 
@@ -26,9 +26,9 @@ public class PlayerHealth : MonoBehaviour
     {
         if (isAlive == true)
         {
-            if (heart[currentHeart].fillAmount > 0)
+            if (hearts[currentHeart].fillAmount > 0)
             {
-                heart[currentHeart].fillAmount -= damage;
+                hearts[currentHeart].fillAmount -= damage;
             }
 
             spriteRenderer.color = Color.red;
@@ -41,9 +41,9 @@ public class PlayerHealth : MonoBehaviour
 
     private void CheckIsAlive()
     {
-        if(heart[currentHeart].fillAmount <= 0)
+        if(hearts[currentHeart].fillAmount <= 0)
         {
-            if(currentHeart + 1 < heart.Length)
+            if(currentHeart + 1 < hearts.Length)
             {
                 currentHeart++;
             }
@@ -58,13 +58,10 @@ public class PlayerHealth : MonoBehaviour
     {
         isAlive = false;
 
-        animator.SetBool("isAlive", false);
+        animator.SetTrigger("isDead");
 
-        GetComponent<PlayerController>().enabled = false;
-
-        //spriteRenderer.color = Color.red;
-
-        //StartCoroutine(WaitToShowDeathCanvas());
+        Destroy(GetComponent<PlayerController>());
+        Destroy(GetComponentInChildren<GroundChecker>());
     }
 
     private void ShowDeathCanvas()
@@ -72,14 +69,6 @@ public class PlayerHealth : MonoBehaviour
         cameraCanvas.SetActive(false);
         deathCanvas.SetActive(true);
     }
-
-    /*private IEnumerator WaitToShowDeathCanvas()
-    {
-        yield return new WaitForSeconds(1.5f);
-
-        cameraCanvas.SetActive(false);
-        deathCanvas.SetActive(true);
-    }*/
 
     private IEnumerator AfterDamage()
     {

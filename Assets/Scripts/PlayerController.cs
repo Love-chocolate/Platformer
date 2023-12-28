@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed;
     [SerializeField] private GameObject damageTrigger;
+    [SerializeField] private GameObject pauseWindow;
+    [SerializeField] private float speed;
 
     private EnemyColliderDetection enemyColliderDetection;
     private GroundChecker groundChecker;
@@ -32,13 +33,23 @@ public class PlayerController : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal");
 
+        PauseTheGame();
         Attack();
-        Rotate();
+        RotatePlayer();
         Run();
     }
 
+    private void PauseTheGame()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            pauseWindow.SetActive(true);
+            Time.timeScale = 0f;
+            playerController.enabled = false;
+        }
+    }
 
-    private void Rotate()
+    private void RotatePlayer()
     {
         if (Input.GetKey(KeyCode.A))
         {
@@ -81,7 +92,7 @@ public class PlayerController : MonoBehaviour
         playerController.enabled = true;
     }
 
-    public void HitEnemy()
+    private void HitEnemy()
     {
         if(enemyColliderDetection.enemyHealth != null)
         {

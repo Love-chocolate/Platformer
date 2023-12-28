@@ -6,6 +6,21 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Water.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MainMenu.unity
+    guid: 3931495c415b1af4aadc446f3cde3644
+  - enabled: 1
+    path: Assets/Scenes/Level 1.unity
+    guid: bf606fa0cfe05e141b209640a4c1a814
+  - enabled: 1
+    path: Assets/Scenes/Level 2.unity
+    guid: d29ca79985283014586f5256e3a67883
+  - enabled: 1
+    path: Assets/Scenes/Level 3.unity
+    guid: 3b54b0ebaf723284ea2a2e068a10c2c2
+  - enabled: 1
+    path: Assets/Scenes/Level 4.unity
+    guid: 7a2e015b151a8134fa2372193cf24d50
+  - enabled: 1
+    path: Assets/Scenes/Level 5.unity
+    guid: 1ef39a176deeae4408cf37c55f0f61fa
   m_configObjects: {}
